@@ -36,7 +36,7 @@ import asyncio
 api="7706788533:"
 bot=Bot(token=api)
 dp=Dispatcher(bot,storage=MemoryStorage())
-kb1=ReplyKeyboardMarkup() #главное меню
+kb1=ReplyKeyboardMarkup(resize_keyboard=True) #главное меню
 kb2=InlineKeyboardMarkup() #выбор расчет калорий или вывод формулы
 
 
