@@ -72,6 +72,7 @@ async def get_info(message):
 @dp.callback_query_handler(text= "calories")
 async def set_age(call):
     await call.message.answer('Введите свой возраст:')
+    call.answer()
     await UserState.age.set()               #ждем передачи сообщения от пользователя -> Состояние age
 
 @dp.message_handler(state=UserState.age) #как только прило сообщение, происходит событие  UserState.age
